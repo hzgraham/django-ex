@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'welcome',
     'todo',
+    'polls',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'openshift/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
